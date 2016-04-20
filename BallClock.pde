@@ -116,9 +116,6 @@ class Ball {
             //balls.remove(others.get(i));
             return others.get(i);
           }
-          else if(y > height + 50){
-            return others.get(i);
-          }
           else{
             float angle = atan2(dy, dx);
             float targetX = x + cos(angle) * minDist;
@@ -131,6 +128,9 @@ class Ball {
             others.get(i).vy += ay;
           }
           
+        }
+        else if(y > height + 50){
+            return others.get(i);
         }
       }   
     }
