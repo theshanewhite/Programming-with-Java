@@ -130,7 +130,7 @@ class Ball {
           
         }
         else if(y > height + 50){
-            return others.get(i);
+            return this;
         }
       }   
     }
